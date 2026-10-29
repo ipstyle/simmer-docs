@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simmer — Tame power-hungry apps when your laptop runs on battery.</title>
+<meta name="description" content="Simmer Lite keeps busy apps from draining your battery.  When your laptop runs on battery, apps you are not using move onto the energy-saving efficiency co">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #16181d; --muted: #5d636e; --line: #e3e6ea;
+    --card: #f7f8fa; --accent: #2e6be6; --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14161a; --fg: #e9eaee; --muted: #a0a6b0; --line: #2a2e36;
+            --card: #1c1f25; --accent: #5b8dfa; --accent-fg: #0d1016; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.6 -apple-system, "Helvetica Neue", system-ui, sans-serif; }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 1.25rem; }
+  header { text-align: center; padding: 4rem 0 2.5rem; }
+  .icon { width: 104px; height: 104px; border-radius: 24px; display: block; margin: 0 auto 1.2rem; }
+  h1 { font-size: 2.4rem; margin: 0 0 .3rem; letter-spacing: -.02em; }
+  .tagline { font-size: 1.15rem; color: var(--muted); margin: 0 0 1.8rem; }
+  .badges { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.8rem; }
+  .badge { font-size: .8rem; color: var(--muted); border: 1px solid var(--line);
+           border-radius: 999px; padding: .25rem .8rem; }
+  .cta { display: inline-block; background: var(--accent); color: var(--accent-fg);
+         text-decoration: none; font-weight: 600; padding: .8rem 1.6rem;
+         border-radius: 10px; margin: 0 .3rem .6rem; }
+  .cta.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  h2 { font-size: 1.35rem; margin: 3rem 0 1rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
+  .shots { display: flex; gap: 1rem; overflow-x: auto; padding-bottom: .6rem; }
+  .shots img { height: 460px; border-radius: 12px; border: 1px solid var(--line); flex: 0 0 auto; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; }
+  .card h3 { margin: 0 0 .4rem; font-size: 1rem; }
+  .card p, .card ul { margin: 0; color: var(--muted); font-size: .92rem; }
+  .card ul { padding-left: 1.1rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 5px;
+         padding: .1rem .35rem; font-size: .85em; }
+  pre { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+        padding: .9rem 1rem; overflow-x: auto; font-size: .85rem; }
+  footer { margin: 4rem 0 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: .88rem; text-align: center; }
+  footer a { color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="icon" src="appicon.png" alt="Simmer app icon">
+  <h1>Simmer</h1>
+  <p class="tagline">Tame power-hungry apps when your laptop runs on battery.</p>
+  <div class="badges">
+    <span class="badge">macOS 26 or later</span>
+    <span class="badge">Free</span>
+    <span class="badge">Notarized by Apple</span>
+    <span class="badge">No accounts · no tracking</span>
+  </div>
+  <a class="cta" href="https://github.com/ipstyle/simmer-docs/releases/latest">Download Simmer</a>
+  <a class="cta secondary" href="#editions">Simmer Lite (App Store)</a>
+</header>
+
+<h2>What it looks like</h2>
+<div class="shots">
+  <img src="panel_en.jpg" alt="Simmer screenshot">
+<img src="rule_safari.jpg" alt="Simmer screenshot">
+<img src="quickstart.jpg" alt="Simmer screenshot">
+</div>
+
+<h2>What it does</h2>
+<div class="grid">
+<div class="card"><h3>Battery first</h3><ul><li>Tames apps only on battery — or always, your choice</li><li>Optional charge-level threshold</li><li>Pauses when you are idle</li></ul></div>
+<div class="card"><h3>Per-app rules</h3><ul><li>Efficiency cores when in background</li><li>CPU limit from 1 % up to 500 %</li><li>Stop completely while in background</li><li>Hide or quit after N minutes idle</li></ul></div>
+<div class="card"><h3>Smart protection</h3><ul><li>Never touches essential system processes</li><li>Leaves apps alone while they play audio or download</li><li>Wakes an app the moment you bring it to front</li></ul></div>
+<div class="card"><h3>Menu bar</h3><ul><li>Flame icon with live CPU usage</li><li>Performance and efficiency core load</li><li>Panel with top processes and tamed apps</li></ul></div>
+<div class="card"><h3>Alerts</h3><ul><li>Notification when an app burns CPU for too long</li><li>Limit it with one click</li></ul></div>
+<div class="card"><h3>Two editions</h3><ul><li>Simmer Lite in the App Store: efficiency cores only</li><li>Simmer (download): full control with a small helper</li></ul></div>
+</div>
+
+<h2 id="editions">Two editions</h2>
+<table>
+  <tr><th></th><th>Simmer (download)</th><th>Simmer Lite (App Store)</th></tr>
+  <tr><td>Efficiency cores in background</td><td>✓</td><td>✓</td></tr>
+  <tr><td>CPU limit 1–500 %</td><td>✓</td><td>—</td></tr>
+  <tr><td>Stop apps in background</td><td>✓</td><td>—</td></tr>
+  <tr><td>Hide or quit when idle</td><td>✓</td><td>—</td></tr>
+  <tr><td>System processes (Spotlight, backups …)</td><td>✓ with helper</td><td>—</td></tr>
+  <tr><td>Faster Time Machine backups</td><td>✓ with helper</td><td>—</td></tr>
+</table>
+<p style="color:var(--muted);font-size:.92rem">The App Store only allows sandboxed apps, and the sandbox forbids pausing or limiting other apps. Simmer Lite does what the sandbox allows; the download edition does everything.</p>
+
+<h2>Install</h2>
+<ol>
+  <li>Download <code>Simmer-x.y.z.zip</code> from the <a href="https://github.com/ipstyle/simmer-docs/releases/latest">latest release</a> and unzip it.</li>
+  <li>Move <code>Simmer.app</code> to your Applications folder and open it. The app is signed and notarized by Apple, so it opens without warnings.</li>
+  <li>Optional: install the helper in Settings → General and approve it once in System Settings → General → Login Items. Without it Simmer controls only your own apps.</li>
+</ol>
+<p style="color:var(--muted);font-size:.92rem">Do not run Simmer together with another app tamer — both would fight over the same apps.</p>
+
+<h2>Permissions</h2>
+<table>
+  <tr><th>Feature</th><th>Permission</th></tr>
+<tr><td>Control system processes (full edition)</td><td>Helper — approve once in System Settings → General → Login Items</td></tr>
+<tr><td>High-CPU alerts</td><td>Notifications</td></tr>
+</table>
+<p style="color:var(--muted);font-size:.92rem">Every permission is requested only when the matching feature is used for the first time.</p>
+
+<h2>Privacy</h2>
+<p>No accounts, no tracking, no analytics, no third-party SDKs and no network access at all. Simmer reads process names and CPU times on your computer and keeps your rules in its own settings. Nothing leaves your computer.</p>
+<p><a href="https://github.com/ipstyle/simmer-docs/blob/main/PRIVACY.md">Read the full privacy policy →</a></p>
+
+<h2>Support</h2>
+<p>Questions, bug reports and ideas belong in the issue tracker — that is the fastest way to reach the developer:</p>
+<p><a href="https://github.com/ipstyle/simmer-docs/issues">github.com/ipstyle/simmer-docs/issues</a></p>
+
+<footer>
+  Simmer · <a href="https://github.com/ipstyle/simmer-docs/blob/main/LICENSE">Freeware</a> · © 2026 ipstyle<br>
+  <a href="https://github.com/ipstyle/simmer-docs">GitHub</a> ·
+  <a href="https://github.com/ipstyle/simmer-docs/blob/main/PRIVACY.md">Privacy</a> ·
+  <a href="https://github.com/ipstyle/simmer-docs/issues">Support</a> ·
+  <a href="https://github.com/ipstyle/simmer-docs/blob/main/CHANGELOG.md">Changelog</a>
+</footer>
+
+</div>
+</body>
+</html>
